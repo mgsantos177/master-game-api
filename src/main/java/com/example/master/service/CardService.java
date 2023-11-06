@@ -1,5 +1,6 @@
 package com.example.master.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -23,6 +24,17 @@ public class CardService {
 
         Card card = cardDTO.createCard();
         cardRepository.save(card);
+    }
+
+    public void createCards(List<CardCreationDTO> cardDTOs) {
+        List<Card> cards = new ArrayList<>();
+
+        for (CardCreationDTO cardDTO : cardDTOs) {
+            Card card = cardDTO.createCard();
+            cards.add(card);
+        }
+
+        cardRepository.saveAll(cards);
     }
 
     public List<Card> getCards() {

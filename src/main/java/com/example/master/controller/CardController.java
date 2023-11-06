@@ -46,4 +46,8 @@ public class CardController {
         cardService.createCard(cardDTO);
     }
 
+    @PostMapping("/batch")
+    public void createCard(@RequestBody List<CardCreationDTO> cardDTOs) {
+        cardService.createCards(cardDTOs);
+    }
 }

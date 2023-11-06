@@ -13,6 +13,4 @@ public interface CardRepository extends MongoRepository<Card, String> {
     @Query(value = "{'category': ?0, 'isAnswered': false}")
     List<Card> findRandomUnansweredByCategory(Category category);
 
-    @Query("{'_id' : ?0}")
-    void markCardAsAnswered(String cardId);
 }
