@@ -28,4 +28,3 @@ build/
 .vscode/
 
 /src/main/resources/env.properties
-/src/main/resources/application.properties
