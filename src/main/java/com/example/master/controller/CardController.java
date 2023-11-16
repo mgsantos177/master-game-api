@@ -37,7 +37,7 @@ public class CardController {
     }
 
     @PutMapping({ "/{id}" })
-    public void findRandomUnansweredCardByCategory(@PathVariable("id") String _id) {
+    public void markCardAsAnswered(@PathVariable("id") String _id) {
         cardService.markCardAsAnswered(_id);
     }
 
